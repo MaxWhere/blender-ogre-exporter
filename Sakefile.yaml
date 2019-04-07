@@ -1,0 +1,13 @@
+build:
+    help: >
+        builds zip, with the exclusion of the bpy module
+    dependencies:
+        - io_ogre/*
+    formula: >
+        rm -rfv io_ogre.zip &&
+        7z a -aoa -tzip -y -r -x!bpy* -x!bpy*.* io_ogre.zip io_ogre &&
+        echo "Compression done!" &&
+        7z x -aoa -y io_ogre.zip -o/home/zaki/.config/blender/2.80/scripts/addons/ &&
+        exec /home/zaki/Blender/Versions/blender-2.80\ 2019-03-24/blender /home/zaki/Blender/Projects/2019-02-01-blender-ogre-export/blender-ogre-export.blend
+    output:
+        - io_ogre.zip

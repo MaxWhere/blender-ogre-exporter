@@ -3,6 +3,24 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# build files
+*.zip
+io_ogre.zip
+.shastore
+OgreXMLConverter.log
+
+# TESTING & EXTERNAL REFERENCES:
+testing
+
+# REFERENCES:
+# bpy libs
+bpy/
+bpy*/
+bpy*.py
+
+# blender api reference
+blender_python_reference_2_80_44
+
 # C extensions
 *.so
 
